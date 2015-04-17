@@ -261,6 +261,11 @@ FilterHeaderViewDelegate
     } else {
         cellWidth = ceilf(size.width) + kCellBtnCenterToBorderMargin;
     }
+    
+    if (cellWidth >= (CGRectGetWidth(self.collectionView.frame)- kCollectionViewToRightMargin *2)) {
+        cellWidth = CGRectGetWidth(self.collectionView.frame)- kCollectionViewToRightMargin *2;
+    }
+    
     return cellWidth;
 }
 
